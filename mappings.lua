@@ -30,8 +30,23 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+
+    ["<leader>a"] = { "<cmd>echo 'Hello world'<cr>", desc = "Say hello world" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+  },
+  i = {
+    ["<C-s>"] = { "<C-o>:w<cr>", desc = "Save file" },
+    ["<C-z>"] = { "<C-o>:undo<cr>", desc = "Undo change" },
+    ["<C-r"] = { "<C-o>:redo<cr>", desc = "Redo change" },
+    ["<S-left>"] = { "<esc>vh", desc = "Start selecting left" },
+    ["<S-right>"] = { "<esc>vl", desc = "Start selecting right" },
+    ["<S-top>"] = { "<esc>vk", desc = "Start selecting to top" },
+    ["<S-down>"] = { "<esc>vj", desc = "Start selecting down" }
+  },
+  v = {
+    ["<bs>"] = { '"_di', desc = "Delete selected text" } 
+--    ["<C-]>"] = { "<C-o>:echo 'teste'", desc = "Move to the right buffer" },
   },
   t = {
     -- setting a mapping to false will disable it

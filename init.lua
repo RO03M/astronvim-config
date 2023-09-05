@@ -81,5 +81,6 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.keymap.set("i", "<C-BS>", "<esc>")
   end,
 }
