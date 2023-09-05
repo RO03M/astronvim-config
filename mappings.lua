@@ -32,6 +32,8 @@ return {
     ["<leader>b"] = { name = "Buffers" },
 
     ["<leader>a"] = { "<cmd>echo 'Hello world'<cr>", desc = "Say hello world" },
+    ["<C-f>"] = { "<cmd>bprevious<cr>" },
+    ["<C-j>"] = { "<cmd>bnext<cr>" }
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
@@ -42,7 +44,9 @@ return {
     ["<S-left>"] = { "<esc>vh", desc = "Start selecting left" },
     ["<S-right>"] = { "<esc>vl", desc = "Start selecting right" },
     ["<S-top>"] = { "<esc>vk", desc = "Start selecting to top" },
-    ["<S-down>"] = { "<esc>vj", desc = "Start selecting down" }
+    ["<S-down>"] = { "<esc>vj", desc = "Start selecting down" },
+    ["<C-f>"] = { "<cmd>bprevious<cr>" },
+    ["<C-j>"] = { "<cmd>bnext<cr>" }
   },
   v = {
     ["<bs>"] = { '"_di', desc = "Delete selected text" } 
